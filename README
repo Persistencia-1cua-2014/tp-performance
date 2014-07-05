@@ -3,6 +3,7 @@ git clone git@github.com:Persistencia-1cua-2014/tp-performance.git
 #   git clone https://github.com/Persistencia-1cua-2014/tp-performance.git
 cd tp-performance
 mkdir src/main/resources/employees_db
-unrar e src/main/resources/employees_db-full-1.0.6.rar src/main/resources/employees_db
+unrar e src/main/resources/employees_db-full-1.0.6.rar \
+    src/main/resources/employees_db
 cd cd src/main/resources/employees_db/
 mysql -uroot -proot < employees.sql
