@@ -24,6 +24,12 @@ public class EmployeeDAO {
 		return session.createCriteria(Employee.class).list();
 	}
 
+    @SuppressWarnings("unchecked")
+    public List<Employee> getLast10() {
+        Session session = SessionManager.getSession();
+        return session.createCriteria(Employee.class).setMaxResults(10).list();
+    }
+
 	public Employee getByCode(int id) {
 		Session session = SessionManager.getSession();
 		return (Employee) session.load(Employee.class, id);
