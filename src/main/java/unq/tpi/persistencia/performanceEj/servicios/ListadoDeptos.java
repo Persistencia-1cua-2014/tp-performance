@@ -20,7 +20,7 @@ public class ListadoDeptos extends AbstractListado {
 		for(Department d: deptos){
 			addColumn(d.getNumber());
 			addColumn(d.getName());
-			addColumn(d.getManager().getFullName());
+			addColumn(new DepartmentDAO().getManager(d).getFullName());
 			newLine();
 		}
 	}
